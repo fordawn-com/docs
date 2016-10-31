@@ -22,7 +22,15 @@ class Documentation
      */
     public function getIndex($version)
     {
-        return $this->cache->remember('laravel.'.$version.'.index', 60,
+        $path = resource_path('docs/laravel/'.$version.'/documentation.md');
+
+        if ($this->files->exists($path)) {
+            return $this->replaceLinks($version, (new \ParsedownExtra)->text($this->files->get($path)));
+        }
+
+        return null;
+
+        return $this->cache->remember('laravel.'.$version.'.index', 0,
             function () use ($version){
                 $path = resource_path('docs/laravel/'.$version.'/documentation.md');
 
@@ -40,7 +48,15 @@ class Documentation
      */
     public function get($version, $page)
     {
-        return $this->cache->remember('laravel.'.$version.'.'.$page, 60,
+        $path = base_path('resources/docs/laravel/'.$version.'/'.$page.'.md');
+
+        if ($this->files->exists($path)) {
+            return $this->replaceLinks($version, (new \ParsedownExtra)->text($this->files->get($path)));
+        }
+
+        return null;
+
+        return $this->cache->remember('laravel.'.$version.'.'.$page, 0,
             function () use ($version, $page) {
                 $path = base_path('resources/docs/laravel/'.$version.'/'.$page.'.md');
 
@@ -68,6 +84,7 @@ class Documentation
     {
         return [
             '5.3' => '5.3',
+            '5.2' => '5.2',
         ];
     }
 

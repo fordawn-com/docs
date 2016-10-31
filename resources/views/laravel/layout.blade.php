@@ -20,8 +20,8 @@
 
 </head>
 <body class="docs language-php">
-  <nav class="main">
-    <a href="/" class="brand nav-block">
+  <header class="main">
+    <a href="/laravel" class="brand nav-block">
       <img src="/image/laravel/logo.png">
       <span>Laravel</span>
     </a>
@@ -42,7 +42,7 @@
     {{--<div class="responsive-sidebar-nav">--}}
       {{--<a href="#" class="toggle-slide menu-link btn">&#9776;</a>--}}
     {{--</div>--}}
-  </nav>
+  </header>
 
   @yield('content')
 
