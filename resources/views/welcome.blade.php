@@ -1,0 +1,1 @@
+<a href="{{url('laravel')}}">laravel</a>
