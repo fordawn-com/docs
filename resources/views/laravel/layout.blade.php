@@ -7,6 +7,7 @@
   <title>{{$title or null}}</title>
 
   <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.7.0/styles/monokai.min.css" rel="stylesheet">
   <link href="/css/laravel/docs.css" rel="stylesheet">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -48,6 +49,8 @@
 
 <script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.7.0/highlight.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.7.0/languages/php.min.js"></script>
 <script>
   $(function(){
     $('.docs-wrapper').find('a[name]').each(function () {
@@ -79,6 +82,11 @@
         $(this).html(str.replace(/\{(.*?)\}/, '<div class="flag"><span class="svg">'+ icon +'</span></div>'));
         $(this).parent().addClass('has-icon ' + word);
       }
+    });
+
+//    hljs.initHighlightingOnLoad();
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
     });
   });
 </script>
