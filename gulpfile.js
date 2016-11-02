@@ -22,5 +22,6 @@ elixir(mix => {
     // mix.sass('./resources/assets/laravel/sass/docs.scss', 'public/static/laravel/css/docs.css')
     //     .version('public/static/laravel/css/docs.css');
 
-    mix.sass('app.scss');
+    mix.sass('app.scss')
+        .version('public/css/app.css');
 });

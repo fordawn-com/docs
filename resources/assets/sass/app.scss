@@ -3,6 +3,41 @@
 // Variables
 @import "variables";
 
-section.block{
-  background-color: #f5f8fa;
+$color__laravel : #f4645f;
+$color__darker_laravel : #e74430;
+
+div.docs-face-container{
+  padding-top: 100px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+
+.docs-face{
+  padding: 30px;
+  margin: 30px;
+  box-sizing: border-box;
+  flex: auto;
+
+  > img{
+    height: 50px;
+  }
+
+  > span{
+    font-size: 32px;
+    margin: 15px 0 0 35px;
+    //padding: 15px 0 0 30px;
+  }
+}
+
+#laravel{
+  background-color: $color__laravel;
+  color: #fff;
+  text-decoration: none;
+
+  &:hover{
+    background-color: $color__darker_laravel;
+  }
 }

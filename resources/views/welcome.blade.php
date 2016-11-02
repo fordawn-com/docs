@@ -1,12 +1,24 @@
 @extends('layouts.index')
 
-@section('content')
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <a href="{{url('laravel')}}">laravel</a>
+@section('style')
+  <link href="{{elixir('css/app.css')}}" rel="stylesheet">
+@endsection
 
-      </div>
-    </div>
+@section('content')
+  <div class="docs-face-container">
+
+    <a href="{{url('laravel')}}" class="docs-face" id="laravel">
+      <img src="/static/laravel/image/logo-white.png">
+      <span>laravel</span>
+      <hr>
+      <p>The PHP Framework For Web Artisans</p>
+    </a>
+    <a href="{{url('laravel')}}" class="docs-face" id="laravel">laravel</a>
+    <a href="{{url('laravel')}}" class="docs-face" id="laravel">laravel</a>
+
+  </div>
+
+  <div class="docs-face-container">
+    <a href="{{url('laravel')}}" class="docs-face" id="laravel">laravel</a>
   </div>
 @endsection

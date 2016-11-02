@@ -15,15 +15,15 @@
   <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-  @yield('style')
+@yield('style')
 
 </head>
 <body>
 
 @yield('content')
 
-<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 @yield('script')
 
